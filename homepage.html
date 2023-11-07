@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage Test</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .search-button {
+            background-color: blue;
+            color: white;
+        }
+        .cart-profile-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .cart-button, .profile-button {
+            margin-left: 10px;
+        }
+        .navbar-container {
+            background-color: #333;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light justify-content-between navbar-container">
+    <a class="navbar-brand">ShopSwift</a>
+    <form class="form-inline">
+        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" style="width: 700px; height: 50px"
+               type="search">
+        <button class="btn btn-outline-success my-2 my-sm-0 search-button" style="width: 100px; height: 50px;">
+            Search
+        </button>
+    </form>
+
+    <div class="cart-profile-buttons">
+        <button class="btn btn-light cart-button" style="height: 50px;">
+            <svg class="bi bi-bag" fill="currentColor" height="30" width="30" xmlns="bag.svg">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
+        </button>
+
+        <button class="btn btn-light profile-button" style="height: 50px;">
+            <svg class="bi bi-person" fill="currentColor" height="30" width="30" xmlns="person.svg">
+                <path d="M12 14c-3.866 0-6.992-2.691-7-6a7.014 7.014 0 0 1 7-7 7.014 7.014 0 0 1 7 7c0.008 3.309-3.126 6-7 6zm0-8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-3 5a3 3 0 1 1 6 0H9z"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
