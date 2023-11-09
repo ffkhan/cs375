@@ -19,8 +19,19 @@
         .navbar-container {
             background-color: #333;
         }
-
-
+        .items-section {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 200px; /* Set the width of each item block */
+        }
 
     </style>
 </head>
@@ -51,7 +62,28 @@
     </div>
 </nav>
 
+<div class="items-section">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <!-- Add more items as needed -->
+</div>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the cart button element
+        var cartButton = document.querySelector('.cart-button');
+
+        // Add a click event listener to the cart button
+        cartButton.addEventListener('click', function () {
+            // Redirect to cart.html
+            window.location.href = 'cart.html';
+        });
+    });
+
+</script>
+
 </body>
 </html>
-
