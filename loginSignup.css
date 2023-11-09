@@ -1,0 +1,98 @@
+body{
+    font-family: ‘Allerta Stencil’;
+    background-color: #F0F8FF;
+    color: #002D72;
+}
+
+.loginContainer, .signupContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #73C2FB;
+    width: 60vh;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+button{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #1560bd;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #B9D9EB;
+    border: none;
+    display: block;
+    text-align: center;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+form *{
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    width: 90%;
+}
+
+form {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+.links-container a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure full width */
+    margin-top: 20px;
+}
+
+.links-container a {
+    display: block; /* This makes sure the text-align: center is applied correctly */
+    text-align: center;
+    width: 100%; /* Take up full width to center content */
+    margin-top: 10px; /* Add space between links */
+}
