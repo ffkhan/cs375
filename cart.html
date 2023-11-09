@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=360, initial-scale=1">
-	<title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-	<link rel="stylesheet" href="cart.css">
+    <meta charset="UTF-8">
+    <meta content="width=360, initial-scale=1" name="viewport">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="cart.css" rel="stylesheet">
     <style>
         .search-button {
             background-color: blue;
@@ -24,71 +24,92 @@
             background-color: #333;
         }
 
+
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-light bg-light justify-content-between navbar-container">
-        <a class="navbar-brand">ShopSwift</a>
-        <form class="form-inline">
-            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" style="width: 700px; height: 50px"
-                   type="search">
-            <button class="btn btn-outline-success my-2 my-sm-0 search-button" style="width: 100px; height: 50px;">
-                Search
-            </button>
-        </form>
-    
-        <div class="cart-profile-buttons">
-            <button class="btn btn-light cart-button" style="height: 50px;">
-                <svg class="bi bi-bag" fill="currentColor" height="30" width="30" xmlns="bag.svg">
-                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-                </svg>
-            </button>
-    
-            <button class="btn btn-light profile-button" style="height: 50px;">
-                <svg class="bi bi-person" fill="currentColor" height="30" width="30" xmlns="person.svg">
-                    <path d="M12 14c-3.866 0-6.992-2.691-7-6a7.014 7.014 0 0 1 7-7 7.014 7.014 0 0 1 7 7c0.008 3.309-3.126 6-7 6zm0-8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-3 5a3 3 0 1 1 6 0H9z"/>
-                </svg>
-            </button>
+<nav class="navbar navbar-light bg-light justify-content-between navbar-container">
+    <a class="navbar-brand">ShopSwift</a>
+    <form class="form-inline">
+        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" style="width: 700px; height: 50px"
+               type="search">
+        <button class="btn btn-outline-success my-2 my-sm-0 search-button" style="width: 100px; height: 50px;">
+            Search
+        </button>
+    </form>
+
+    <div class="cart-profile-buttons">
+        <button class="btn btn-light cart-button" style="height: 50px;">
+            <svg class="bi bi-bag" fill="currentColor" height="30" width="30" xmlns="bag.svg">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
+        </button>
+
+        <button class="btn btn-light profile-button" style="height: 50px;">
+            <svg class="bi bi-person" fill="currentColor" height="30" width="30" xmlns="person.svg">
+                <path d="M12 14c-3.866 0-6.992-2.691-7-6a7.014 7.014 0 0 1 7-7 7.014 7.014 0 0 1 7 7c0.008 3.309-3.126 6-7 6zm0-8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-3 5a3 3 0 1 1 6 0H9z"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+
+<main class="main-container">
+
+    <section class="section">
+        <h2 class="text-center">Products</h2>
+        <div class="products">
+            <div class="product">
+                <img alt="" class="product__image" src="">
+                <h2 class="product__name">Product1</h2>
+                <h3 class="product__price"></h3>
+                <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img alt="" class="product__image" src="i">
+                <h2 class="product__name">Product2</h2>
+                <h3 class="product__price"></h3>
+                <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img alt="" class="product__image" src="">
+                <h2 class="product__name">Product3</h2>
+                <h3 class="product__price"></h3>
+                <button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
         </div>
-    </nav>
-    
+    </section>
 
-	<main class="main-container">
+    <section class="section">
+        <h2 class="text-center">Cart</h2>
+        <div class="cart"></div>
+    </section>
 
-		<section class="section">
-			<h2 class="text-center">Products</h2>
-			<div class="products">
-				<div class="product">
-					<img class="product__image" src="" alt="">
-					<h2 class="product__name">Product1</h2>
-					<h3 class="product__price"></h3>
-					<button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-				<div class="product">
-					<img class="product__image" src="i" alt="">
-					<h2 class="product__name">Product2</h2>
-					<h3 class="product__price"></h3>
-					<button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-				<div class="product">
-					<img class="product__image" src="" alt="">
-					<h2 class="product__name">Product3</h2>
-					<h3 class="product__price"></h3>
-					<button class="btn btn--primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-			</div>
-		</section>
+</main>
 
-		<section class="section">
-			<h2 class="text-center">Cart</h2>
-			<div class="cart"></div>
-		</section>
+<script src="cart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the cart button element
+        var cartButton = document.querySelector('.cart-button');
 
-	</main>
+        // Add a click event listener to the cart button
+        cartButton.addEventListener('click', function () {
+            // Redirect to cart.html
+            window.location.href = 'cart.html';
+        });
+    });
 
-	<script src="cart.js"></script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var logoButton = document.querySelector('.navbar-brand');
+        logoButton.addEventListener('click', function () {
+            window.location.href = 'homepage.html';
+        });
+    });
+
+</script>
 </body>
 
 </html>

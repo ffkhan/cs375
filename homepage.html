@@ -37,6 +37,8 @@
         }
 
 
+
+
     </style>
 </head>
 <body>
@@ -99,6 +101,12 @@
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        var logoButton = document.querySelector('.navbar-brand');
+        logoButton.addEventListener('click', function () {
+            window.location.href = 'homepage.html';
+        });
+    });
 
 </script>
 
