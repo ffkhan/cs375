@@ -13,6 +13,7 @@ app.options('*', cors())
 
 //middleware
 app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
+app.use(express.static(__dirname + '/../'));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
@@ -43,6 +44,10 @@ mongoose.connect(process.env.CONNECTION_STRING, {
     console.log(err);
 })
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/../');
+});
+
 app.listen(3000, ()=>{
-    console.log('Server is running on http://localhost:3000');
+    console.log('Server is running on http://localhost:3000/homepage.html');
 })

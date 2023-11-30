@@ -1,0 +1,97 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0 20px;
+}
+
+/* This will center your nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links li {
+  padding: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* Styling for auth buttons */
+.auth-buttons {
+  display: flex; /* Aligns buttons in a row */
+}
+
+.auth-buttons button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.auth-buttons button:last-child {
+  margin-right: 0;
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.brand-title {
+  font-family: 'Cookie', cursive;
+  font-size: 2em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+#usernameDisplay {
+    display: block;
+    margin-left: auto;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#logoutButton {
+    padding: 10px 15px;
+    margin-left: 10px; /* Spacing between the username and the button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: none; /* Hidden by default */
+}
+
+#logoutButton:hover {
+    background-color: #0056b3;
+}
+
+

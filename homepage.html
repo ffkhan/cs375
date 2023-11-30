@@ -1,114 +1,130 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Homepage Test</title>-->
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <style>-->
+<!--        .search-button {-->
+<!--            background-color: blue;-->
+<!--            color: white;-->
+<!--        }-->
+<!--        .cart-profile-buttons {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--        }-->
+<!--        .cart-button {-->
+<!--            margin-left: 10px;-->
+<!--        }-->
+<!--        .profile-button {-->
+<!--            margin-left: 10px;-->
+<!--        }-->
+<!--        .navbar-container {-->
+<!--            background-color: #333;-->
+<!--        }-->
+<!--        .items-section {-->
+<!--            margin-top: 20px;-->
+<!--            display: flex;-->
+<!--            flex-wrap: wrap;-->
+<!--            justify-content: space-around;-->
+<!--        }-->
+<!--        .item {-->
+<!--            border: 1px solid #ddd;-->
+<!--            padding: 10px;-->
+<!--            margin: 10px;-->
+<!--            text-align: center;-->
+<!--            width: 200px; /* Set the width of each item block */-->
+<!--        }-->
+
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<nav class="navbar navbar-light bg-light justify-content-between navbar-container">-->
+<!--    <a class="navbar-brand">ShopSwift</a>-->
+<!--    <form class="form-inline">-->
+<!--        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" style="width: 700px; height: 50px"-->
+<!--               type="search">-->
+<!--        <button class="btn btn-outline-success my-2 my-sm-0 search-button" style="width: 100px; height: 50px;">-->
+<!--            Search-->
+<!--        </button>-->
+<!--    </form>-->
+
+<!--    <div class="cart-profile-buttons">-->
+<!--        <button class="btn btn-light cart-button" style="height: 50px;">-->
+<!--            <svg class="bi bi-bag" fill="currentColor" height="30" width="30" xmlns="bag.svg">-->
+<!--                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>-->
+<!--            </svg>-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; Profile dropdown &ndash;&gt;-->
+<!--        <div class="btn-group">-->
+<!--            <button aria-expanded="false" aria-haspopup="true" class="btn btn-light profile-button dropdown-toggle"-->
+<!--                    data-toggle="dropdown" style="height: 50px;" type="button">-->
+<!--                <svg class="bi bi-person" fill="currentColor" height="30" width="30" xmlns="person.svg">-->
+<!--                    <path d="M12 14c-3.866 0-6.992-2.691-7-6a7.014 7.014 0 0 1 7-7 7.014 7.014 0 0 1 7 7c0.008 3.309-3.126 6-7 6zm0-8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-3 5a3 3 0 1 1 6 0H9z"/>-->
+<!--                </svg>-->
+<!--            </button>-->
+<!--            <div class="dropdown-menu">-->
+<!--                <a class="dropdown-item" href="#">Profile</a>-->
+<!--                <a class="dropdown-item" href="#">Settings</a>-->
+<!--                <div class="dropdown-divider"></div>-->
+<!--                <a class="dropdown-item" href="login.html">Logout</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<div class="items-section">-->
+<!--    <div class="item">Item 1</div>-->
+<!--    <div class="item">Item 2</div>-->
+<!--    <div class="item">Item 3</div>-->
+<!--    &lt;!&ndash; Add more items as needed &ndash;&gt;-->
+<!--</div>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded', function () {-->
+<!--        // Get the cart button element-->
+<!--        var cartButton = document.querySelector('.cart-button');-->
+
+<!--        // Add a click event listener to the cart button-->
+<!--        cartButton.addEventListener('click', function () {-->
+<!--            // Redirect to cart.html-->
+<!--            window.location.href = 'cart.html';-->
+<!--        });-->
+<!--    });-->
+
+<!--    document.addEventListener('DOMContentLoaded', function () {-->
+<!--        var logoButton = document.querySelector('.navbar-brand');-->
+<!--        logoButton.addEventListener('click', function () {-->
+<!--            window.location.href = 'homepage.html';-->
+<!--        });-->
+<!--    });-->
+
+
+
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Homepage Test</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .search-button {
-            background-color: blue;
-            color: white;
-        }
-        .cart-profile-buttons {
-            display: flex;
-            align-items: center;
-        }
-        .cart-button {
-            margin-left: 10px;
-        }
-        .profile-button {
-            margin-left: 10px;
-        }
-        .navbar-container {
-            background-color: #333;
-        }
-        .items-section {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-            width: 200px; /* Set the width of each item block */
-        }
-
-
-    </style>
-</head>
-<body>
-
-<nav class="navbar navbar-light bg-light justify-content-between navbar-container">
-    <a class="navbar-brand">ShopSwift</a>
-    <form class="form-inline">
-        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" style="width: 700px; height: 50px"
-               type="search">
-        <button class="btn btn-outline-success my-2 my-sm-0 search-button" style="width: 100px; height: 50px;">
-            Search
-        </button>
-    </form>
-
-    <div class="cart-profile-buttons">
-        <button class="btn btn-light cart-button" style="height: 50px;">
-            <svg class="bi bi-bag" fill="currentColor" height="30" width="30" xmlns="bag.svg">
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-            </svg>
-        </button>
-
-        <!-- Profile dropdown -->
-        <div class="btn-group">
-            <button aria-expanded="false" aria-haspopup="true" class="btn btn-light profile-button dropdown-toggle"
-                    data-toggle="dropdown" style="height: 50px;" type="button">
-                <svg class="bi bi-person" fill="currentColor" height="30" width="30" xmlns="person.svg">
-                    <path d="M12 14c-3.866 0-6.992-2.691-7-6a7.014 7.014 0 0 1 7-7 7.014 7.014 0 0 1 7 7c0.008 3.309-3.126 6-7 6zm0-8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-3 5a3 3 0 1 1 6 0H9z"/>
-                </svg>
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="login.html">Logout</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<div class="items-section">
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
-    <!-- Add more items as needed -->
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get the cart button element
-        var cartButton = document.querySelector('.cart-button');
-
-        // Add a click event listener to the cart button
-        cartButton.addEventListener('click', function () {
-            // Redirect to cart.html
-            window.location.href = 'cart.html';
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var logoButton = document.querySelector('.navbar-brand');
-        logoButton.addEventListener('click', function () {
-            window.location.href = 'homepage.html';
-        });
-    });
-
-
-
-</script>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopSwift</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+    </body>
 </html>

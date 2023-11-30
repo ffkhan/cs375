@@ -9,7 +9,7 @@
     <body>
 
         <div class = "loginContainer">
-            <form>
+            <form id="loginForm">
                 <h3>Login Here</h3>
 
                 <label for="login-username">Username</label>
@@ -18,17 +18,19 @@
                 <label for="login-password">Password</label>
                 <input type="password" placeholder="Password" id="login-password">
 
-                <button>Log In</button>
+                <button type="submit" form="loginForm" value="Submit">Log In</button>
 
                 <div class="links-container">
                     <a href="#">Forgot Password</a>
                     <br>
-                    <a href="#">Signup</a>
+                    <a href="http://localhost:3000/signup.html">Signup</a>
                 </div>
 
             </form>
 
         </div>
+
+        <script src="loginScript.js"></script>
 
     </body>
 </html>
