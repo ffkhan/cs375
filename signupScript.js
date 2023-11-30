@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             email: document.getElementById('signup-username').value,
             passwordHash: document.getElementById('signup-password').value,
             phone: document.getElementById('phone-number').value,
-            isAdmin: true,
+            isAdmin: false,
             street: document.getElementById('street-address').value,
             apartment: document.getElementById('apartment-address').value,
             zip: document.getElementById('zip-address').value,
