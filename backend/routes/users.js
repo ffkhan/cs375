@@ -22,7 +22,27 @@ router.get('/:id', async(req,res)=>{
     res.status(200).send(user);
 })
 
+router.get('/get-id/:email', async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.params.email });
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found with the provided email.' });
+        }
+        res.status(200).json({ success: true, userId: user.id });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, error: 'Internal Server Error' });
+    }
+});
+
+
 router.post('/', async (req,res)=>{
+
+    const existingUser = await User.findOne({ email: req.body.email });
+    if (existingUser) {
+      return res.status(400).json({ success: false, message: 'Email already registered.' });
+    }
+
     let user = new User({
         name: req.body.name,
         email: req.body.email,
@@ -77,9 +97,8 @@ router.put('/:id',async (req, res)=> {
 })
 
 router.post('/login', async (req,res) => {
-    console.log(req.body);
+
     const user = await User.findOne({email: req.body.email});
-    console.log(user);
     const secret = process.env.secret;
     if(!user) {
         return res.status(400).send('The user not found');

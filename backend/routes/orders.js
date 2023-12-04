@@ -45,7 +45,7 @@ router.post('/', async (req,res)=>{
         return totalPrice
     }))
 
-    const totalPrice = totalPrices.reduce((a,b) => a +b , 0);
+    const totalPrice = totalPrices.reduce((a,b) => a + b , 0);
 
     let order = new Order({
         orderItems: orderItemsIdsResolved,
