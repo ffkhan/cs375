@@ -46,6 +46,9 @@ async function isRevoked(req, jwt) {
         else if (requestedRoute.startsWith(`/api/v1/users/`) && req.method === 'GET') {
             return false;
         }
+        else if (requestedRoute.startsWith(`/api/v1/users/`) && req.method === 'PUT') {
+            return false;
+        }
         else {
             return true;
         }
