@@ -1,0 +1,55 @@
+/* payment.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-summary {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.order-summary h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.payment-option {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
