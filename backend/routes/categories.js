@@ -46,8 +46,6 @@ router.delete('/:id', (req, res)=>{
     })
 })
 
-// categories.js
-
 router.get('/:id/products', async (req, res) => {
     try {
       const category = await Category.findById(req.params.id);
