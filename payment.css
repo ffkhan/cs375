@@ -5,9 +5,11 @@ body {
 }
 
 .payment-container {
-    max-width: 600px;
+    max-width: 500px; /* Adjusted maximum width for better spacing */
     margin: 0 auto;
     padding: 20px;
+    background-color: #D3D3D3;
+    display: flex;
 }
 
 .order-summary {
@@ -52,4 +54,28 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+.payment-container {
+    display: flex;
+}
+
+.payment-options-container {
+    flex: 4;
+}
+
+.cart-details-container,
+.shipping-address-container {
+    flex: 1;
+    padding: 20px;
+}
+
+#paypalDetails {
+    display: none;
+}
+
+/* Ensure that both cart-details-container and shipping-address-container are visible */
+.cart-details-container,
+.shipping-address-container {
+    display: block;
 }

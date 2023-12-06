@@ -8,70 +8,86 @@
 </head>
 <body>
 <script src="navbar.js"></script>
+<
 <div class="payment-container">
-    <h2>Select Payment Option</h2>
-    <select id="paymentOptions">
-        <option value="creditCard">Credit/Debit Card</option>
-        <option value="Paypal">PayPal</option>
-        <option value="Credits">Credits</option>
+    <div class="payment-options-container">
+        <h2>Select Payment Option</h2>
+        <select id="paymentOptions">
+            <option value="creditCard">Credit/Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="credits">Credits</option>
+        </select>
 
-    </select>
+        <div class="payment-option" id="creditCardDetails">
+            <h3>Credit/Debit Card Details</h3>
+            <form id="creditCardForm">
+                <label for="cardNumber">Card Number:</label>
+                <input id="cardNumber" name="cardNumber" required type="text">
 
-    <div class="payment-option" id="creditCardDetails">
-        <h3>Credit/Debit Card Details</h3>
-        <form id="creditCardForm">
-            <label for="cardNumber">Card Number:</label>
-            <input id="cardNumber" name="cardNumber" required type="text">
+                <label for="expiryDate">Expiry Date:</label>
+                <input id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required type="text">
 
-            <label for="expiryDate">Expiry Date:</label>
-            <input id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required type="text">
+                <label for="cvv">CVV:</label>
+                <input id="cvv" name="cvv" required type="text">
+            </form>
 
-            <label for="cvv">CVV:</label>
-            <input id="cvv" name="cvv" required type="text">
-        </form>
+            <!-- Billing Address for Credit/Debit Card -->
+            <div id="billingAddress">
+                <h3>Billing Address</h3>
+                <form id="billingAddressForm">
+                    <label for="billingName">Full Name:</label>
+                    <input id="billingName" name="billingName" required type="text">
+
+                    <label for="billingAddress">Address:</label>
+                    <input id="billingAddress" name="billingAddress" required type="text">
+
+                    <label for="billingCity">City:</label>
+                    <input id="billingCity" name="billingCity" required type="text">
+
+                    <label for="billingState">State:</label>
+                    <input id="billingState" name="billingState" required type="text">
+
+                    <label for="billingZip">Zip Code:</label>
+                    <input id="billingZip" name="billingZip" required type="text">
+                </form>
+            </div>
+        </div>
+        <div class="payment-option" id="shippingAddress">
+            <h3>Shipping Address</h3>
+            <form id="shippingAddressForm">
+                <label for="shippingName">Full Name:</label>
+                <input id="shippingName" name="shippingName" required type="text">
+
+                <label for="shippingAddress">Address:</label>
+                <input id="shippingAddress" name="shippingAddress" required type="text">
+
+                <label for="shippingCity">City:</label>
+                <input id="shippingCity" name="shippingCity" required type="text">
+
+                <label for="shippingState">State:</label>
+                <input id="shippingState" name="shippingState" required type="text">
+
+                <label for="shippingZip">Zip Code:</label>
+                <input id="shippingZip" name="shippingZip" required type="text">
+            </form>
+        </div>
+
+        <div class="payment-option" id="paypalDetails">
+            <h3>PayPal Details</h3>
+            <form id="paypalForm">
+                <label for="paypalEmail">PayPal Email:</label>
+                <input id="paypalEmail" name="paypalEmail" required type="email">
+
+                <!-- Additional PayPal form fields can be added as needed -->
+            </form>
+        </div>
+        <button id="submitPayment">Submit Payment</button>
+        <button id="back">Back to Cart</button>
     </div>
-
-    <div class="payment-option" id="billingAddress">
-        <h3>Billing Address</h3>
-        <form id="billingAddressForm">
-            <label for="billingName">Full Name:</label>
-            <input id="billingName" name="billingName" required type="text">
-
-            <label for="billingAddress">Address:</label>
-            <input id="billingAddress" name="billingAddress" required type="text">
-
-            <label for="billingCity">City:</label>
-            <input id="billingCity" name="billingCity" required type="text">
-
-            <label for="billingState">State:</label>
-            <input id="billingState" name="billingState" required type="text">
-
-            <label for="billingZip">Zip Code:</label>
-            <input id="billingZip" name="billingZip" required type="text">
-        </form>
-    </div>
-
-    <div class="payment-option" id="shippingAddress">
-        <h3>Shipping Address</h3>
-        <form id="shippingAddressForm">
-            <label for="shippingName">Full Name:</label>
-            <input id="shippingName" name="shippingName" required type="text">
-
-            <label for="shippingAddress">Address:</label>
-            <input id="shippingAddress" name="shippingAddress" required type="text">
-
-            <label for="shippingCity">City:</label>
-            <input id="shippingCity" name="shippingCity" required type="text">
-
-            <label for="shippingState">State:</label>
-            <input id="shippingState" name="shippingState" required type="text">
-
-            <label for="shippingZip">Zip Code:</label>
-            <input id="shippingZip" name="shippingZip" required type="text">
-        </form>
-    </div>
-
-    <button id="submitPayment">Submit Payment</button>
 </div>
+
+
+<script src="payment.js"></script>
 </body>
 </html>
+
