@@ -11,6 +11,8 @@ function authJwt() {
         path: [
             {url: /\/public\/uploads(.*)/ , methods: ['GET', 'OPTIONS'] },
             {url: /\/api\/v1\/products(.*)/ , methods: ['GET', 'OPTIONS'] },
+            {url: /\/api\/v1\/users(.*)/,register: ['POST', 'OPTIONS']},
+            {url: /\/api\/v1\/users(.*)/,login: ['GET', 'OPTIONS']},
             `${api}/users/login`,
             `${api}/users/register`,
         ]
@@ -28,7 +30,7 @@ async function isRevoked(req, jwt) {
     if (isAdmin) {
         // Admin has access to all routes
         return false;
-    } 
+    }
     else {
         // For non-admins, allow access to specific routes
         if (requestedRoute.startsWith(`/api/v1/categories`) && req.method === 'GET') {
