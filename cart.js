@@ -2,44 +2,6 @@
 
 let cart = (JSON.parse(localStorage.getItem('cart')) || []);
 const cartDOM = document.querySelector('.cart');
-const addToCartButtonsDOM = document.querySelectorAll('[data-action="ADD_TO_CART"]');
-
-if (cart.length > 0) {
-  cart.forEach(cartItem => {
-    const product = cartItem;
-    insertItemToDOM(product);
-
-    addToCartButtonsDOM.forEach(addToCartButtonDOM => {
-      const productDOM = addToCartButtonDOM.parentNode;
-
-      if (productDOM.querySelector('.product__name').innerText === product.name) {
-        handleActionButtons(addToCartButtonDOM, product);
-      }
-    });
-
-  });
-}
-
-addToCartButtonsDOM.forEach(addToCartButtonDOM => {
-  addToCartButtonDOM.addEventListener('click', () => {
-    const productDOM = addToCartButtonDOM.parentNode;
-    const product = {
-      image: productDOM.querySelector('.product__image').getAttribute('src'),
-      name: productDOM.querySelector('.product__name').innerText,
-      price: productDOM.querySelector('.product__price').innerText,
-      quantity: 1,
-    };
-
-    const isInCart = (cart.filter(cartItem => (cartItem.name === product.name)).length > 0);
-
-    if (!isInCart) {
-      insertItemToDOM(product);
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));
-      handleActionButtons(addToCartButtonDOM, product);
-    }
-  });
-});
 
 function insertItemToDOM(product) {
   cartDOM.insertAdjacentHTML('beforeend', `
