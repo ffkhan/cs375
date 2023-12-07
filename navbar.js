@@ -7,7 +7,6 @@ document.write(`
 
         <ul class="nav-links">
             <li><a href="http://localhost:3000/homepage.html">Home</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="http://localhost:3000/cart.html">Shop</a></li>
             <li><a href="#">Services</a></li>
         </ul>
