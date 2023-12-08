@@ -19,6 +19,12 @@ document.write(`
 
         <div class="user-container">
             <span id="usernameDisplay"></span>
+            <button id="profileButton" onclick="location.href='http://localhost:3000/profile.html';">
+                <img src="profileIcon.png" alt="Profile Icon" style="width: 80px; height: 50px;">
+            </button>
+            <button id="cartButton" onclick="location.href='http://localhost:3000/cart.html';">
+                <img src="carticon.png" alt="Cart Icon" style="width: 80px; height: 50px;">
+            </button>
             <button id="logoutButton" style="display: none;">Logout</button>
         </div>
 

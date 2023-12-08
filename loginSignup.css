@@ -1,7 +1,7 @@
 body{
     font-family: 'Allerta Stencil', sans-serif; /* Ensure fallback font is there */
     background-color: #F0F8FF;
-    color: #002D72;
+    color: #000000;
     margin: 0;
     display: flex;
     flex-direction: column; /* Stack children vertically */
@@ -9,24 +9,32 @@ body{
     align-items: center; /* Center horizontally */
     min-height: 100vh; /* Minimum height is full viewport height */
     padding: 20px;
+    background-image: url('loginPic.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
 .loginContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #73C2FB;
-    width: 60vh;
-    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 40vh;
+    height: 70vh;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 65%;
+    left: 24%;
     transform: translate(-50%, -50%);
-    border-radius: 15px;
+    border-radius: 0;
+}
+
+#loginForm {
+    text-align: center; /* Center the form content */
 }
 
 .signupContainer {
-    background-color: #73C2FB;
+    background-color: #558bd9;
     width: calc(100% - 40px); /* Full width minus horizontal padding */
     max-width: 600px; /* Set a max-width that fits most screens */
     margin-bottom: 20px; /* Ensure there is space at the bottom */
@@ -39,7 +47,7 @@ body{
 button{
     margin-top: 40px;
     width: 100%;
-    background-color: #1560bd;
+    background-color: #558bd9;
     padding: 15px 30px;
     font-size: 18px;
     font-weight: 600;
@@ -52,15 +60,16 @@ button{
 }
 
 input{
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
+    display: flex;
+    height: 30px;
+    width: 70%;
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 4px;
+    padding: 0 30px;
+    margin-top: 10px;
     font-size: 14px;
     font-weight: 300;
+
 }
 
 label{
@@ -112,5 +121,5 @@ button,
     display: block; /* This makes sure the text-align: center is applied correctly */
     text-align: center;
     width: 100%; /* Take up full width to center content */
-    margin-top: 10px; /* Add space between links */
+    margin-top: 6px; /* Add space between links */
 }
