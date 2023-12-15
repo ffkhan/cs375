@@ -43,21 +43,21 @@ window.addEventListener("load", function () {
       .then(() => {
         const addToCartButtonsDOM = document.querySelectorAll('[id^="addToCart"]');
 
-        if (cart.length > 0) {
-          cart.forEach(cartItem => {
-            const product = cartItem;
-            insertItemToDOM(product);
-
-            addToCartButtonsDOM.forEach(addToCartButtonDOM => {
-              const productDOM = addToCartButtonDOM.parentNode;
-
-              if (productDOM.querySelector('.product__name').innerText === product.name) {
-                handleActionButtons(addToCartButtonDOM, product);
-              }
-            });
-
-          });
-        }
+//        if (cart.length > 0) {
+//          cart.forEach(cartItem => {
+//            const product = cartItem;
+//            insertItemToDOM(product);
+//
+//            addToCartButtonsDOM.forEach(addToCartButtonDOM => {
+//              const productDOM = addToCartButtonDOM.parentNode;
+//
+//              if (productDOM.querySelector('.product__name').innerText === product.name) {
+//                handleActionButtons(addToCartButtonDOM, product);
+//              }
+//            });
+//
+//          });
+//        }
       })
       .catch(error => console.error('Error fetching data:', error));
 
