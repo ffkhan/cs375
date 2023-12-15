@@ -15,15 +15,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
         if(data.token) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userName', data.name);
-            localStorage.setItem('userPassword', data.password);
-            localStorage.setItem('userEmail', data.email);
-            localStorage.setItem('userPhone', data.phone);
-            localStorage.setItem('userStreet', data.street);
-            localStorage.setItem('userApartment', data.apartment);
-            localStorage.setItem('userZip', data.zip);
-            localStorage.setItem('userCity', data.city);
-            localStorage.setItem('userCountry', data.country);
-            window.location.href = 'index.html';
+            if (data.isAdmin) {
+                window.location.href = 'sellerPage.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+            
         } else {
             alert("Login Failed");
         }
