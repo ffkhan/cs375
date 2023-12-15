@@ -12,9 +12,9 @@ app.use(cors());
 app.options('*', cors())
 
 //middleware
-//app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
-//app.use(express.static(__dirname + '/../'));
-app.use(express.static(__dirname + '/../public'));
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
+app.use(express.static(__dirname + '/../'));
+//app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
@@ -47,7 +47,8 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/../public/index.html');
+//    res.sendFile(__dirname + '/../public/index.html')
+    res.sendFile(__dirname + '/../public/');;
 });
 
 app.listen(3000, ()=>{
