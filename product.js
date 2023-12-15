@@ -22,6 +22,7 @@ window.addEventListener("load", function () {
                     image: product.image,
                     name: product.name,
                     price: product.price,
+                    id: product.id,
                     quantity: 1,
                   };
               

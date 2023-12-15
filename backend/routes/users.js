@@ -119,7 +119,8 @@ router.post('/login', async (req,res) => {
                 user: user.email,
                 name: user.name,
                 token: token,
-                isAdmin: user.isAdmin
+                isAdmin: user.isAdmin,
+                id: user.id
             }
         )
     } else {

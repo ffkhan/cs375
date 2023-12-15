@@ -15,6 +15,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
         if(data.token) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userName', data.name);
+            localStorage.setItem('userID', data.id);
             if (data.isAdmin) {
                 window.location.href = 'sellerPage.html';
             } else {
