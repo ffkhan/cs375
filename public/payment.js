@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const paymentOption = document.getElementById('paymentOptions').value;
         let paymentData;
 
+        if (!userId) {
+            alert("You need to login first!");
+            window.location.href = 'index.html';
+            return;
+        }
+
         switch (paymentOption) {
             case 'creditCard':
                 paymentData = {
