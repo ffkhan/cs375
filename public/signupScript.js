@@ -24,9 +24,39 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        window.location.href = 'index.html';
     })
     .catch((error) => {
         console.error('Error:', error);
     });
+
+    const username = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+
+    fetch('http://localhost:3000/api/v1/users/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: username, password: password }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.token) {
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('userName', data.name);
+            localStorage.setItem('userID', data.id);
+            if (data.isAdmin) {
+                window.location.href = 'sellerPage.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+
+        } else {
+            alert("Login Failed");
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
 });

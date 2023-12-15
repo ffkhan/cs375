@@ -25,6 +25,7 @@ const productsRoutes = require('./routes/products');
 const usersRoutes = require('./routes/users');
 const ordersRoutes = require('./routes/orders');
 
+
 const api = process.env.API_URL;
 
 app.use(`${api}/categories`, categoriesRoutes);
@@ -49,5 +50,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, ()=>{
-    console.log('Server is running on http://localhost:3000/index.html');
+    console.log('Server is running on http://localhost:3000/public/index.html');
 })

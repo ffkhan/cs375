@@ -5,22 +5,26 @@
     <title>Payment Page</title>
     <link href="navbar.css" rel="stylesheet">
     <!-- <link href="sellerPage.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="homepage.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
     <link href="payment.css" rel="stylesheet">
 </head>
 <body>
   <script src="navbar.js"></script>
-  <div class="payment-container">
+  <main class="payment-container">
       <form id="form" class="form">
         <h2 id="feedbackTitle">Seller Form</h2>
         <div class="alert" id="alert" style="display:none;"> 
           <strong>Success!</strong> Your product has been added.
         </div>
         <div class="form-control">
-          <label for="productname">Product Name</label>
+          <label for="name">Product Name</label>
           <input type="text" id="name" name="name" required/>
         </div>
         <div class="form-control">
-        <label for="productcategory">Product Category</label>
+        <label for="category">Product Category</label>
         <select id="category" name="category" required>
             <option value="6575f3289292bd3a640ca3a8">Books</option>
             <option value="6552465f03745a4be6ec2c7d">Food</option>

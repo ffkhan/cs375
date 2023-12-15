@@ -150,6 +150,18 @@ router.get(`/get/featured/:count`, async (req, res) =>{
     res.send(products);
 })
 
+router.get('/search', async (req, res) => {
+    try {
+        const searchQuery = req.query.query;
+        const products = await Product.find({
+            name: { $regex: searchQuery, $options: 'i' }
+        });
+        res.json(products);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 router.put(
     '/gallery-images/:id', 
     uploadOptions.array('images', 10), 
