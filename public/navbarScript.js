@@ -62,9 +62,22 @@ document.addEventListener("DOMContentLoaded", function() {
         signupBtn.style.display = 'none';
         logoutBtn.style.display = 'block';
         profileButton.style.display = 'block';
-        sellerPageLink.style.display = 'block';
         usernameDisplay.style.display = 'block';
         usernameDisplay.textContent = userName;
+const userId = localStorage.getItem('userID');
+                    fetch(`http://localhost:3000/api/v1/users/${userId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.isAdmin) {
+                                sellerPageLink.style.display = 'block';
+                            } else {
+                                sellerPageLink.style.display = 'none';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert("Error loading user data");
+                        });
     }
 
     function displayLoggedOutState() {
@@ -76,4 +89,5 @@ document.addEventListener("DOMContentLoaded", function() {
         usernameDisplay.textContent = '';
         profileButton.style.display = 'none';
     }
+
 });
