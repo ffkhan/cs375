@@ -7,6 +7,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         email: document.getElementById('signup-email').value,
         password: document.getElementById('signup-password').value,
         phone: document.getElementById('phone-number').value,
+        isAdmin: document.getElementById('isAdminCheckBox').checked,
         street: document.getElementById('street-address').value,
         apartment: document.getElementById('apartment-address').value,
         zip: document.getElementById('zip-address').value,
