@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         signupBtn.style.display = 'none';
         logoutBtn.style.display = 'block';
         profileButton.style.display = 'block';
+        sellerPageLink.style.display = 'block';
         usernameDisplay.style.display = 'block';
         usernameDisplay.textContent = userName;
     }
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loginBtn.style.display = 'block';
         signupBtn.style.display = 'block';
         logoutBtn.style.display = 'none';
+        sellerPageLink.style.display = 'none';
         usernameDisplay.style.display = 'none';
         usernameDisplay.textContent = '';
         profileButton.style.display = 'none';

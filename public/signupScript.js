@@ -49,7 +49,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             if (data.isAdmin) {
                 window.location.href = 'sellerPage.html';
             } else {
-                window.location.href = 'index.html';
+                window.location.href = './index.html';
             }
 
         } else {
