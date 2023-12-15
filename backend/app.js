@@ -46,7 +46,7 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/../');
+    res.sendFile(__dirname + '/../public/');
 });
 
 app.listen(3000, ()=>{
